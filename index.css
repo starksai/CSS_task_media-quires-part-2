@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#ham-icone-input{
+    display: none;
+}
+
+.ham-icone{
+    display: none;
+}
+
+.navbar{
+    background-color: rgb(255, 71, 9);
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+
+.navlinks{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 0px 0.8rem;
+}
+
+@media screen and (max-width:400px){
+    .navbar{
+        position: relative;
+    }
+    .navlinks{
+        background-color: rgb(255, 71, 9);
+        padding: 0.5rem;
+        position: absolute;
+        width: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        top:3.3rem;
+        left: 0;
+        align-items: center;
+        gap: 0.7rem;
+    }
+    .ham-icone{
+        display: block;
+    }
+    .ham-icone:hover{
+        cursor: pointer;
+    }
+    .navlinks li{
+        display: none;
+    }
+
+    #ham-icone-input:checked + .navlinks li{
+        display: block;
+    }
+}
+
+@media screen and (min-width:401px) and (max-width:768px){
+    .navbar{
+        position: relative;
+    }
+    .navlinks{
+        background-color: rgb(255, 71, 9);
+        padding: 0.5rem;
+        position: absolute;
+        width: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        top:3.3rem;
+        left: 0;
+        align-items: center;
+        gap: 0.7rem;
+    }
+    .ham-icone{
+        display: block;
+    }
+    .ham-icone:hover{
+        cursor: pointer;
+    }
+    .navlinks li{
+        display: none;
+    }
+
+    #ham-icone-input:checked + .navlinks li{
+        display: block;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px){
+    body{
+        font-size: 1rem;
+    }
+    .navbar{
+        padding: 0.7rem 1.5rem;
+    }
+    .navlinks ul{
+        gap: 0px 1rem;
+    }
+}
+
+@media screen and (min-width:1025px) and (max-width:1440px){
+    body{
+        font-size: 1.2rem;
+    }
+    .navbar{
+        padding: 0.7rem 2.2rem;
+    }
+    .navlinks{
+        gap: 0px 1rem;
+    }
+}
+
+@media screen and (min-width:1441px) and (max-width:2560px){
+    /* html{
+        font-size: 32px;
+    }
+    html > body{
+        font-size: 100%;
+    } */
+    .navbar{
+        padding: 1rem 3rem;
+        font-size: 32px;
+    }
+    .navbar > .navlinks{
+        gap: 0px 1rem;
+        font-size: 100%;
+
+    }
+}
+
+@media  (min-width:2561px){
+    body{
+        font-size: 2.5rem;
+    }
+    .navbar{
+        padding: 3rem 6rem;
+    }
+    .navlinks{
+        gap: 0px 1.4rem;
+    }
+}
